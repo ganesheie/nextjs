@@ -1,0 +1,33 @@
+{
+  "Section1Teasers": {
+    "TeaserTitle": "Atradius is the spirit of connectivity",
+    "APIBody": "We aim to make handling your Atradius credit insurance policy a pleasant experience and your business processes more efficient by investing in new connnectivity technologies.",
+    "TeaserImage": "",
+    "Version": " ",
+    "TextPosition": "No",
+    "TeaserButton": []
+  },
+  "Heading": "Creating new ways of working with you",
+  "AccordionPanels": [],
+  "SEOTitle": "About us",
+  "Introduction": "Atradius Connectivity",
+  "PageTitle": "About us",
+  "ImageURL": "https://group.atradius.com/api/background/about-header.png",
+  "Meta-Description": "About us",
+  "AccordionTitle": "",
+  "Body": "<p>Connectivity is an important element of Atradius\u2019 strategy to create new ways of working with our customers.<br />\r\n<br />\r\nThis new connectivity offering is designed with the latest technology to provide all the information you need in one place and to be easy to understand, making the process of connecting simple and cost effective.<br />\r\n�</p>\r\n\r\n<p>Connectivity means you can spend less time on administrative tasks and have the comfort that you have complied with the policy - all through a simple connection.</p>\r\n",
+  "Section4Teasers": {
+    "TeaserTitle": "Start now!",
+    "APIBody": "See how easy it is to register in the Atradius API developer portal.",
+    "TeaserImage": "",
+    "Version": "",
+    "TextPosition": "",
+    "TeaserButton": {
+      "LinkUrl": "/register-now",
+      "LinkTarget": "Same Window",
+      "LandingPage": "/register-now",
+      "LinkText": "Get started"
+    }
+  },
+  "AccordionSubTitle": ""
+}
