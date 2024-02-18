@@ -1,0 +1,13 @@
+.icon-list {
+    li {
+        position: relative;
+    
+        & > img {
+            height: 16px;
+            position: absolute;
+            left: -24px;
+            top: 3px;
+            margin: auto;
+        }
+    }
+}

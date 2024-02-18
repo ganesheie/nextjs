@@ -1,0 +1,117 @@
+// Colour variables
+$color-gold-lightest:                            #E9D5B1;
+$color-gold-lighter:                             #E3C99B;
+$color-gold:                                     #DDBD85;
+$color-gold-darker:                              #B59B6D;
+$color-gold-darkest:                             #8D7955;
+
+
+$color-red:                                      #d7012d;
+$color-red-darker:                               #9D0121;
+$color-red-darkest:                              #710018;
+
+
+$color-grey-lightest:                            #848484;
+$color-grey-lighter:                             #727272;
+$color-grey:                                     #616161;
+$color-grey-darker:                              #565656;
+$color-grey-darkest:                             #333333;
+
+
+$color-white:                                    #FFFFFF;
+$color-white-darker:                             #e6e6e6;
+$color-white-darkest:                            #c9c9c9;
+
+
+// Text variables
+$catalana:                                       'Catalana', Arial, sans-serif;
+$catalana-sans:                                  'Catalana Sans', Arial, sans-serif;
+$base-font-size-raw:                             17;
+$base-font-size:                                 17px;
+$base-line-height:                               1.353em;
+
+// Breakpoint Variables
+$breakpoint-small:                               0px;
+$breakpoint-medium:                              480px;
+$breakpoint-large:                               768px;
+$breakpoint-xlarge:                              1024px;
+
+
+
+
+// Partial Variables
+
+// Accordion
+$accordion-border-color:                        $color-white-darkest;
+$accordion-header-number-text-color:            $color-grey-lightest;
+$accordion-header-text-color:                   $color-grey-lightest;
+$accordion-collapse-icon-color:                 $color-grey-lightest;
+
+// Body
+$body-text-color:                               $color-grey-darker;
+$body-bg-color:                                 $color-white;
+
+// Buttons
+$button-primary-bg-color:                       $color-gold;
+$button-primary-hover-bg-color:                 $color-gold-darker;
+$button-primary-active-bg-color:                $color-gold-darkest;
+
+$button-secondary-bg-color:                     $color-white;
+$button-secondary-text-color:                   $color-grey-darkest;
+$button-secondary-hover-bg-color:               $color-white-darker;
+$button-secondary-active-bg-color:              $color-white-darker;
+
+$button-tertiary-bg-color:                      $color-red;
+$button-tertiary-hover-bg-color:                $color-red-darker;
+$button-tertiary-active-bg-color:               $color-red-darkest;
+
+$button-translucent-bg-color:                   rgba(black, 0.4);
+$button-translucent-text-color:                 $color-white;
+$button-translucent-hover-bg-color:             rgba(black, 0.2);
+$button-translucent-active-bg-color:            rgba(black, 0.6);
+
+$button-outlined-border-color:                  $color-white;
+$button-outlined-hover-bg-color:                $color-white;
+$button-outlined-hover-text-color:              $color-grey-darker;
+$button-outlined-active-bg-color:               $color-white-darker;
+$button-outlined-active-text-color:             $color-grey-darkest;
+
+// Footer
+$footer-link-color:                             $color-grey-lightest;
+$footer-copyright-text-color:                   $color-grey-darker;
+
+// Headings
+$heading-color:                                 $color-grey-darkest;
+
+// Header
+$header-link-text-color:                        $color-white;
+$header-link-hover-text-color:                  $color-white;
+
+// Horizontal Rule
+$hr-bg-color:                                   $color-white-darkest;
+
+// Images
+$image-overlay-bg-color:                        $color-grey-darkest;
+$image-overlay-text-color:                      $color-white;
+$image-featured-tag-bg-color:                   $color-grey-darkest;
+$image-featured-tag-text-color:                 $color-white;
+
+// Links
+$link-border-color:                             $color-gold;
+$link-hover-text-color:                         $color-white;
+
+// Panels
+$panel-accent-color:                            $color-grey-darker;
+$panel-border-color:                            $color-grey-lightest;
+
+// Sections
+$section-bg-text-color:                         $color-white;
+$section-bg-heading-text-color:                 $color-white;
+
+$section-red-bg-color:                          $color-red;
+$section-gold-bg-color:                         $color-red;
+$section-grey-bg-color:                         $color-grey;
+$section-grey-gradient-bg-color:                linear-gradient(to bottom, $color-grey 0%,$color-grey-darkest 100%);
+
+// Vertical Rule
+$vr-bg-color:                                   $color-grey-darker;

@@ -1,0 +1,28 @@
+.input__container {
+    label {
+        transform: translateY(56px);
+        color: $color-white-darkest;
+        cursor: text;
+    }
+}
+
+.input {
+    border: 0 none;
+    border-bottom: 3px solid $color-white-darkest;
+    outline: none;
+    padding: 16px 0;
+    font-size: $base-font-size;
+    font-family: $catalana-sans;
+    color: $color-grey-darkest;
+    appearance: none;
+
+    &:focus {
+        border-color: $color-gold;
+
+        & + label {
+            transform: translateY(24px);
+            font-size: 13px;
+            color: $color-grey-darkest;
+        }
+    }
+}

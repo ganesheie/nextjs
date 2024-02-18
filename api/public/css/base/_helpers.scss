@@ -1,0 +1,105 @@
+$spacing: (0, 4, 8, 12, 16, 24, 32, 40, 48, 64, 96, 128);
+$sides: (top, bottom, left, right); 
+
+@mixin margin($size) {
+    @each $space in $spacing {
+        @each $side in $sides {
+            .atr-#{$size}-margin-#{$side}-#{$space} {
+                margin-#{$side}: #{$space}px;
+            }
+        }
+    }
+
+    @each $space in $spacing {
+        .atr-#{$size}-margin-#{$space} {
+            margin: #{$space}px;
+        }
+
+        .atr-#{$size}-margin-vertical-#{$space} {
+            margin-top: #{$space}px;
+            margin-bottom: #{$space}px;
+        }
+
+        .atr-#{$size}-margin-horizontal-#{$space} {
+            margin-left: #{$space}px;
+            margin-right: #{$space}px;
+        }
+    }
+}
+
+@mixin padding($size) {
+    @each $space in $spacing {
+        @each $side in $sides {
+            .atr-#{$size}-padding-#{$side}-#{$space} {
+                padding-#{$side}: #{$space}px;
+            }
+        }
+    }
+
+    @each $space in $spacing {
+        .atr-#{$size}-padding-#{$space} {
+            padding: #{$space}px;
+        }
+
+        .atr-#{$size}-padding-vertical-#{$space} {
+            padding-top: #{$space}px;
+            padding-bottom: #{$space}px;
+        }
+
+        .atr-#{$size}-padding-horizontal-#{$space} {
+            padding-left: #{$space}px;
+            padding-right: #{$space}px;
+        }
+    }
+}
+
+@mixin offset($size) {
+    @each $space in $spacing {
+        @each $side in $sides {
+            .atr-#{$size}-offset-#{$side}-#{$space} {
+                position: relative;
+                margin-#{$side}: -#{$space}px;
+            }
+        }
+    }
+
+    @each $space in $spacing {
+        .atr-#{$size}-offset-#{$space} {
+            margin: -#{$space}px;
+        }
+
+        .atr-#{$size}-offset-vertical-#{$space} {
+            margin-top: -#{$space}px;
+            margin-bottom: -#{$space}px;
+        }
+
+        .atr-#{$size}-offset-horizontal-#{$space} {
+            margin-left: -#{$space}px;
+            margin-right: -#{$space}px;
+        }
+    }
+}
+
+@media (min-width: $breakpoint-small) {
+    @include margin(sm);
+    @include padding(sm);
+    @include offset(sm);
+}
+
+@media (min-width: $breakpoint-medium) {
+    @include margin(md);
+    @include padding(md);
+    @include offset(md);
+}
+
+@media (min-width: $breakpoint-large) {
+    @include margin(lg);
+    @include padding(lg);
+    @include offset(lg);
+}
+
+@media (min-width: $breakpoint-xlarge) {
+    @include margin(xl);
+    @include padding(xl);
+    @include offset(xl);
+}

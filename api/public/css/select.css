@@ -1,0 +1,56 @@
+div .country--searchable{
+    width: 640px;
+}
+.country--searchable ul {
+     width: 640px;
+}
+.country--searchable ul li.selected {
+    width: 640px;
+}
+
+div .region--searchable{
+    width: 300px;
+}
+.region--searchable ul {
+     width: 300px;
+}
+.region--searchable ul li.selected {
+    width: 300px;
+} 
+
+div.searchable {
+    float: left;
+    margin: 0px;
+    padding-bottom : 16px;
+}
+.select{
+    background: url(../img/dropdown.png) no-repeat right bottom;
+    background-size: 16px;
+ }
+
+
+.searchable ul {
+    display: none;
+    list-style-type: none;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #add8e6;
+    border-top: none;
+    max-height: 180px;
+    margin: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding: 0;
+}
+
+.searchable ul li {
+    padding: 7px 9px;
+    /*border-bottom: 1px solid #e1e1e1;*/
+    cursor: pointer;
+    color: #6e6e6e;
+}
+
+.searchable ul li.selected {
+    background-color: #e8e8e8;
+    color: #333;
+}   

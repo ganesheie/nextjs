@@ -1,0 +1,34 @@
+section {
+    position: relative;
+}
+
+.section {
+    // .section--bg
+    &--bg {
+        color: $section-bg-text-color;
+
+        h1, h2, h3, h4, h5, h6 {
+            color: $section-bg-heading-text-color;
+        }
+
+        // .section--bg-gold
+        &-gold {
+            background: $section-gold-bg-color;
+        }
+
+        // .section--bg-red
+        &-red {
+            background: $section-gold-bg-color;
+        }
+
+        // .section--bg-grey
+        &-grey {
+            background: $section-grey-bg-color;
+        }
+
+        // .section--bg-grey-gradient
+        &-grey-gradient {
+            background: $section-grey-gradient-bg-color;
+        }
+    }
+}

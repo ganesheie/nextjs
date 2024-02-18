@@ -1,0 +1,9 @@
+body {
+    color: $body-text-color;
+    background-color: $body-bg-color;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+    font-family: $catalana-sans;
+    font-weight: normal;
+    -webkit-font-smoothing: subpixel-antialiased;
+}

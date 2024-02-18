@@ -1,0 +1,125 @@
+.atr-message {
+	padding: 12px 16px 12px 80px;
+    position: relative;
+    box-sizing: border-box;
+    white-space: normal;
+    background-size: 64px 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 7px;
+    display: block;
+    font-size: 16px;
+    line-height: 24px;
+    font-family : Arial;
+}
+.atr-message:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    font-size: 32px;
+    line-height: 32px;
+    color: white;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 16px;
+    left: 16px;
+}
+.atr-message h3 {
+	 font-size: 16px;
+     font-weight: 700;
+     line-height: 24px;
+}
+
+.error--title{
+	color:#565656;
+	font-weight: bold;
+}
+
+.atr-message h1, .atr-message h2, .atr-message h3, .atr-message h4, .atr-message h5, .atr-message h6 {
+	  font-family : Arial;
+}
+.no-title {
+    padding: 8px 12px 8px 52px;
+    background-size: 40px 100%;
+    background-repeat: no-repeat;
+    background-color: white;
+    border: 1px solid;
+    border-radius: 7px;
+    display: block;
+}
+.no-title:before {
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-size: 16px;
+	line-height: 16px;
+	position: absolute;
+	width: 16px;
+    height: 16px;
+    top: 12px;
+    left: 12px;
+}
+.atr-message .atr-message__dismiss-btn {
+	 display: none;
+	 position: absolute;
+	 right: 8px;
+	 top: 8px;
+	 color: #5d5d5d;
+	 line-height: 14px;
+	 padding: 8px;
+	 width: 14px;
+	 text-align: center;
+}
+.atr-message--dismissable .atr-message__dismiss-btn {
+	 display: block;
+}
+.atr-message--info {
+	 background-image: linear-gradient(to bottom right, #4B9FD9, #1872A0);
+	 border-color: #1872A0;
+}
+.atr-message--info:before {
+	 content: '\f05a';
+}
+.atr-message--success {
+	 background-image: linear-gradient(to bottom right, #82C049, #4C851F );
+	 border-color: #4C851F ;
+}
+.atr-message--success:before {
+	 content: '\f058';
+}
+.atr-message--error {
+	 background-image: linear-gradient(to bottom right, #F52D18, #B81907);
+	 border-color: #B81907;
+}
+.atr-message--error:before {
+	 content: '\f071';
+}
+.atr-message--warning {
+	 background-image: linear-gradient(to bottom right, #F5B63F, #DC9409 );
+	 border-color: #DC9409 ;
+}
+.atr-message--warning:before {
+	 content: '\f071';
+}
+.atr-message--helper {
+	 background-image: linear-gradient(to bottom right, #A7A7A7, #8D8D8D);
+	 border-color: #8D8D8D;
+}
+.atr-message--helper:before {
+	 content: '\f059';
+}
+.notification-body a{
+	color:#1872A0;
+}
+/*.notification-body p {
+	font-size: 16px;
+    line-height: 24px;
+    font-family : Arial;
+}
+.notification-body li{
+
+}*/
+
+.notification-body strong{
+	font-weight:bold;
+}

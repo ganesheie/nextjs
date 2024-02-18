@@ -1,0 +1,89 @@
+.button {
+    padding: 9px 24px;
+    color: $color-white;
+    appearance: none;
+    background-color: transparent;
+    border: 0 none;
+    font-family: $catalana-sans;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    transition: all 100ms ease;
+    text-align: center;
+    display: inline-block;
+
+    // .button--primary
+    &--primary {
+        background-color: $button-primary-bg-color;
+
+        &:hover {
+            background-color: $button-primary-hover-bg-color;
+        }
+
+        &:active {
+            background-color: $button-primary-active-bg-color;
+        }
+    }
+
+    // .button--secondary
+    &--secondary {
+        background-color: $button-secondary-bg-color;
+        color: $button-secondary-text-color;
+
+        &:hover {
+            background-color: $button-secondary-hover-bg-color;
+        }
+
+        &:active {
+            background-color: $button-secondary-active-bg-color;
+        }
+    }
+
+    // .button--tertiary
+    &--tertiary {
+        background-color: $button-tertiary-bg-color;
+
+        &:hover {
+            background-color: $button-tertiary-hover-bg-color;
+        }
+
+        &:active {
+            background-color: $button-tertiary-active-bg-color;
+        }
+    }
+
+    // .button--translucent
+    &--translucent {
+        background-color: $button-translucent-bg-color;
+        color: $button-translucent-text-color;
+
+        &:hover {
+            background-color: $button-translucent-hover-bg-color;
+        }
+
+        &:active {
+            background-color: $button-translucent-active-bg-color;
+        }
+    }
+
+    &--outlined {
+        box-shadow: inset 0 0 0 2px rgba($button-outlined-border-color, 1);
+        color: $button-outlined-border-color;
+
+        &:hover {
+            background-color: $button-outlined-hover-bg-color;
+            color: $button-outlined-hover-text-color;
+        }
+
+        &:active {
+            background-color: $button-outlined-active-bg-color;
+            color: $button-outlined-active-text-color;
+        }
+    }
+
+    &--wide {
+        min-width: 170px;
+    }
+}

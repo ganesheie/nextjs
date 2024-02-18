@@ -1,0 +1,67 @@
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background:white;
+  border:2px solid #C9C9C9;
+}
+
+.container input:checked ~ .checkmark {
+  border:2px solid #C9C9C9;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 3px;
+  top: 5px;
+  width: 20px;
+  border-bottom: 4px solid #DC052C;
+  height: 10px;
+  border-right: 4px solid #DC052C;
+  transform: scaleX(-1) rotate(45deg);
+  -o-transform:scaleX(-1) rotate(45deg);
+  -ms-transform:scaleX(-1) rotate(45deg);
+  -webkit-transform:scaleX(-1) rotate(45deg);
+}
+
+.blue:after { 
+  border-bottom: 4px solid #1872A0 !important;
+  border-right: 4px solid #1872A0 !important;
+ 
+}
+
+.checkbox--error {
+  border:2px solid #DC052C;
+}  

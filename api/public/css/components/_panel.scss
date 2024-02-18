@@ -1,0 +1,26 @@
+.panel {
+    &--accent {
+        border-top: 8px solid $panel-accent-color;
+    }
+
+    &--shadow {
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.13);
+    }
+
+    &--border {
+        border: 1px solid $panel-border-color;
+    }
+
+    &--white {
+        background-color: $color-white;
+    }
+
+    &--dark-grey {
+        background-color: $color-grey-darker;
+        color: $color-white-darker;
+
+        h2, h3, h4 {
+            color: $color-white;
+        }
+    }
+}

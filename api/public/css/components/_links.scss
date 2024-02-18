@@ -1,0 +1,43 @@
+a {
+    transition: all 100ms ease;
+}
+
+.link {
+    // .link--underline
+    &--underline {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    &--gold {
+        color: $color-gold;
+    }
+
+    &--arrow-left {
+        position: relative;
+        padding-left: 12px;
+
+        &:before, &:after {
+            position: absolute;
+            content: '';
+            width: 2px;
+            height: 8px;
+            border-radius: 4px;
+            left: 0;
+            background: $color-white;
+        }
+
+        &:before {
+            top: 5px;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            top: 9px;
+            transform: rotate(-45deg);
+        }
+    }
+}

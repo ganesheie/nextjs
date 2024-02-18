@@ -1,0 +1,142 @@
+@font-face {
+	font-family: 'Catalana Sans';
+	src: url('../fonts/catalana-sans/regular/CatalanaSans-Regular.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/catalana-sans/regular/CatalanaSans-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/catalana-sans/regular/CatalanaSans-Regular.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/catalana-sans/regular/CatalanaSans-Regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/catalana-sans/regular/CatalanaSans-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+
+// @font-face {
+// 	font-family: 'Catalana Sans';
+// 	src: url('../fonts/lato/italic/lato-italic.eot'); /* IE9 Compat Modes */
+//     src: url('../fonts/lato/italic/lato-italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//          url('../fonts/lato/italic/lato-italic.woff2') format('woff2'), /* Modern Browsers */
+//          url('../fonts/lato/italic/lato-italic.woff') format('woff'), /* Modern Browsers */
+//          url('../fonts/lato/italic/lato-italic.ttf') format('truetype');
+// 	font-weight: normal;
+// 	font-style: italic;
+// 	text-rendering: optimizeLegibility;
+// }
+
+@font-face {
+	font-family: 'Catalana Sans';
+	src: url('../fonts/catalana-sans/medium/CatalanaSans-Medium.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/catalana-sans/medium/CatalanaSans-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/catalana-sans/medium/CatalanaSans-Medium.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/catalana-sans/medium/CatalanaSans-Medium.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/catalana-sans/medium/CatalanaSans-Medium.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+
+@font-face {
+	font-family: 'Catalana Sans';
+	src: url('../fonts/catalana-sans/bold/CatalanaSans-Bold.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/catalana-sans/bold/CatalanaSans-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/catalana-sans/bold/CatalanaSans-Bold.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/catalana-sans/bold/CatalanaSans-Bold.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/catalana-sans/bold/CatalanaSans-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+
+// @font-face {
+// 	font-family: 'Lato';
+// 	src: url('../fonts/lato/bold-italic/lato-bolditalic.eot'); /* IE9 Compat Modes */
+//     src: url('../fonts/lato/bold-italic/lato-bolditalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//          url('../fonts/lato/bold-italic/lato-bolditalic.woff2') format('woff2'), /* Modern Browsers */
+//          url('../fonts/lato/bold-italic/lato-bolditalic.woff') format('woff'), /* Modern Browsers */
+//          url('../fonts/lato/bold-italic/lato-bolditalic.ttf') format('truetype');
+// 	font-weight: 700;
+// 	font-style: italic;
+// 	text-rendering: optimizeLegibility;
+// }
+
+@font-face {
+	font-family: 'Catalana';
+	src: url('../fonts/catalana/medium/CO-Md.eot'); /* IE9 Compat Modes */
+    src: url('../fonts/catalana/medium/CO-Md.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/catalana/medium/CO-Md.woff2') format('woff2'), /* Modern Browsers */
+         url('../fonts/catalana/medium/CO-Md.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/catalana/medium/CO-Md.ttf') format('truetype');
+	font-weight: 500;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $catalana;
+    font-weight: 500;
+	color: $heading-color;
+}
+
+h1 {
+	font-size: rem(42);
+	line-height: rem(54); 
+}
+
+h2 {
+	font-size: rem(31);
+	line-height: rem(40); 
+}
+
+h3 {
+	font-size: rem(23);
+	line-height: rem(30); 
+}
+
+h4 {
+	font-size: rem(18);
+	line-height: rem(23); 
+}
+
+// h5 {
+// 	font-size: rem(16);
+// 	line-height: rem(20); 
+// }
+
+strong {
+	font-family: $catalana-sans;
+	font-weight: 500;
+}
+
+.text {
+	&--xlarge {
+		font-size: 21px;
+		line-height: 30px;
+	}
+
+	&--large {
+		font-size: 18px;
+		line-height: 24px;
+	}
+
+	&--small {
+		font-size: 15px;
+		line-height: 20px;
+	}
+
+	&--xsmall {
+		font-size: 13px;
+		line-height: 17px;
+	}
+
+	&--center {
+		text-align: center;
+	}
+
+	&--lighten {
+		color: $color-grey-lightest;
+	}
+
+	&--gold {
+		color: $color-gold;
+	}
+}
