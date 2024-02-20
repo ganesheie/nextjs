@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import HomeCardList from "../app/components/HomeCardList";
 import HomeSection2List from "../app/components/HomeSection2List";
 import AccordionList from "../app/components/AccordionList";
-import GetStarted from "../app/components/GetStarted";
+import GetStarted from "../app/components/GetStarted"; 
 
 export default async function Home() {
   const staticData = await fetch(`http://localhost:8080/getpagecontent/home`, {

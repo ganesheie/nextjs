@@ -12,14 +12,13 @@ const Navigation = () => {
   useEffect(() => {
     const fetchSection1Items = async () => {
       try {
-        const response = await fetch(
+        const response = await fetch(  
           `http://localhost:8080/getsection1items?page=${page}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
         const data = await response.json();
-
         setSection1Details(data);
       } catch (error) {
         setError(error.message);
@@ -27,6 +26,7 @@ const Navigation = () => {
     };
     fetchSection1Items();
   }, [page]);
+
   const bgImage = backgroundImages;
   const backgroundImageStyle =
     bgImage && bgImage[page]
@@ -35,7 +35,8 @@ const Navigation = () => {
   const wrapperClasses = `wrapper atr-sm-padding-horizontal-32 atr-md-padding-horizontal-48 atr-xl-padding-horizontal-16 ${
     bgImage[page] ? "bg-image" : ""
   }`;
-
+  
+  
   return (
     <div className={wrapperClasses} style={backgroundImageStyle}>
       <header className="header atr-sm-padding-vertical-32" role="banner">
@@ -136,9 +137,8 @@ const Navigation = () => {
           </nav>
         </div>
       </header>
-      {section1Details &&
-        Object.keys(section1Details).length > 0 &&
-        section1Details.Section1Teasers.length > 0 && (
+      {wrapperClasses.includes("bg-image") && section1Details && section1Details.Section1Teasers && 
+        (
           <SectionWithInHeader content={section1Details} />
         )}
     </div>

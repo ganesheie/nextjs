@@ -1,0 +1,4 @@
+.next
+/api/node_modules
+/nodeservice/node_modules
+api/.next/app-build-manifest.json

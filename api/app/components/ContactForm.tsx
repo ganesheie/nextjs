@@ -4,6 +4,7 @@ import { FormEvent } from "react";
 import CountryDropDown from "./CountryDropDown";
 
 const ContactForm = () => {
+  
   const serverMessageMap = {
     error:
       "An error has occurred. Please refresh your browser. If the problem continues contact us.",
@@ -69,9 +70,9 @@ const ContactForm = () => {
       }
       setErrors({});
     } else {
-      console.log("erros has key in handleSubmit  : ", Object.keys(errors));
       setErrors(errors);
     }
+    $('html, body').animate({scrollTop: $("section").offset().top}, 750);
   }
 
   return (
@@ -104,6 +105,7 @@ const ContactForm = () => {
             <p>{serverMessageMap[serverResponse]}</p>
           </div>
         </div>
+        
       )}
 
       <form onSubmit={handleSubmit} method="POST">
