@@ -3,15 +3,27 @@ import React, { useRef, useState } from "react";
 import { FormEvent } from "react";
 import CountryDropDown from "./CountryDropDown";
 
+// @ts-ignore
+import ReCAPTCHA from 'react-google-recaptcha';
+
 const ContactForm = () => {
+  interface FormErrors {
+    captcha?: string;
+    name? : string
+    country? : string
+    email? : string
+    organisation? : string
+    contactreason? : string
+
+  }
   
   const serverMessageMap = {
     error:
       "An error has occurred. Please refresh your browser. If the problem continues contact us.",
     success: "Thank you for your enquiry",
   };
-  const [errors, setErrors] = useState([]);
-  const [serverResponse, setserverResponse] = useState([]);
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [serverResponse, setServerResponse] = useState<"error" | "success" | "">("");
 
   const nameRef = useRef<HTMLInputElement>(null);
   const countryRef = useRef<HTMLSelectElement>(null);
@@ -20,32 +32,43 @@ const ContactForm = () => {
   const telephoneRef = useRef<HTMLInputElement>(null);
   const contactaboutRef = useRef<HTMLSelectElement>(null);
   const contactreasonRef = useRef<HTMLTextAreaElement>(null);
+  const captchaRef = useRef<ReCAPTCHA>(null);
+  
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    const errors = {};
-    const name = nameRef.current.value.trim();
+    const errors: { [key: string]: string } = {};
+    const token = captchaRef.current?.getValue();
+    if (!token){
+      errors["captcha"] = "Captcha is not clicked";
+    }
+    const name = nameRef.current?.value.trim() ?? '';
+
+
     if (!name) {
       errors["name"] = "Name is Required";
     }
-    const country = countryRef.current.value.trim();
+    const country = countryRef.current?.value.trim();
     if (!country) {
       errors["country"] = "Country is Required";
     }
-    const email = EmailAddressRef.current.value.trim();
+    const email = EmailAddressRef.current?.value.trim();
     if (!email) {
-      errors["email"] = "Email is Required";
-    } else if (email && !/\S+@\S+\.\S+/.test(email)) {
-      errors["email"] = "Email is Invalid ";
+      errors["email"] = "Email is required";
+    } else if (!/\S+@\S+\.\S+/.test(email)) {
+      errors["email"] = "Please enter a valid email address";
     }
-    const org = organisationRef.current.value.trim();
+   
+
+    const org = organisationRef.current?.value.trim();
     if (!org) {
       errors["organisation"] = "Company is Required";
     }
-    const contactreason = contactreasonRef.current.value.trim();
+    const contactreason = contactreasonRef.current?.value.trim();
     if (!contactreason) {
       errors["contactreason"] = "What can we help you with is Required";
     }
+
     if (Object.keys(errors).length <= 0) {
       console.log(event);
       const formData = new FormData(event.currentTarget);
@@ -64,10 +87,11 @@ const ContactForm = () => {
         body: JSON.stringify(jsonData),
       });
       if (!response.ok) {
-        setserverResponse("error");
+        setServerResponse("error");
       } else {
-        setserverResponse("success");
+        setServerResponse("success");
       }
+      captchaRef.current?.reset();
       setErrors({});
     } else {
       setErrors(errors);
@@ -97,17 +121,13 @@ const ContactForm = () => {
           </div>
         </div>
       )}
-      {serverResponse.length > 0 && (
+      {serverResponse && (
         <div style={{ marginTop: "20px", paddingBottom: "0px" }}>
-          <div
-            className={`atr-message atr-message--${serverResponse} no-title atr-sm-padding-horizontal-32 atr-sm-padding-vertical-16`}
-          >
+          <div className={`atr-message atr-message--${serverResponse} no-title atr-sm-padding-horizontal-32 atr-sm-padding-vertical-16`}>
             <p>{serverMessageMap[serverResponse]}</p>
           </div>
         </div>
-        
       )}
-
       <form onSubmit={handleSubmit} method="POST">
         <div className="input__container atr-flex atr-sm-12">
           <input
@@ -225,14 +245,8 @@ const ContactForm = () => {
             <span className="form-field-required">*</span>
           </label>
         </div>
-        <div className="input__container atr-sm-12 atr-sm-margin-top-32">
-          <div
-            id="form_captcha"
-            className="row row--feedback g-recaptcha"
-            data-sitekey="6LcvGAoTAAAAAGHQYzqB1sSqRf3G7Y2tjtCx8Lpj"
-            data-callback="captchaClicked"
-            data-expired-callback="captchaInvalidated"
-          ></div>
+        <div className="input__container atr-sm-12 atr-sm-margin-top-24">
+          <ReCAPTCHA sitekey="6LdzMwgTAAAAAEEHpWldxMwiu1Yz1ctY3aXTYbpw"   ref={captchaRef} />
         </div>
         <input
           className="button button button--red atr-sm-margin-top-24"
